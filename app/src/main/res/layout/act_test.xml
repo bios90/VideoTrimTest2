@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.dimfcompany.videotrimtest2.custom_views.CustomSeekBar
+        android:background="@android:color/holo_red_dark"
+        android:id="@+id/rangeSeekbar3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:bar_color="#26000000"
+        app:bar_highlight_color="#b3D81B60"
+        app:corner_radius="0"
+        app:data_type="_integer"
+        app:left_thumb_color="#1A246D"
+        app:left_thumb_color_pressed="#030B47"
+        app:max_value="100"
+        app:min_value="50"
+        app:right_thumb_color="#1A246D"
+        app:right_thumb_color_pressed="#030B47" />
+
+</LinearLayout>

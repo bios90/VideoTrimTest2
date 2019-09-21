@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/la_for_video"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+        <VideoView
+            android:id="@+id/video_view"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/img_play_pause"
+
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_play" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@id/la_for_video"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="00:00" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="12dp">
+
+            <LinearLayout
+                android:id="@+id/la_for_timeline"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+
+
+            <com.innovattic.rangeseekbar.RangeSeekBar
+                android:id="@+id/seekbar"
+
+                app:rsb_minThumbDrawable="@drawable/line_horizontal"
+                app:rsb_maxThumbDrawable="@drawable/line_horizontal"
+                android:padding="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:rsb_sidePadding="0dp"
+                app:rsb_touchRadius="40dp"
+                app:rsb_trackColor="#26000000"
+                app:rsb_trackSelectedColor="#b3D81B60"
+                app:rsb_trackSelectedThickness="56dp"
+                app:rsb_trackThickness="56dp" />
+
+            <com.dimfcompany.videotrimtest2.custom_views.CustomSeek2
+                android:id="@+id/seekbar_for_play"
+
+                android:progressTint="@android:color/transparent"
+                android:progressBackgroundTint="@android:color/transparent"
+                android:thumb="@drawable/line_horizontal_white"
+                android:layout_marginLeft="-16dp"
+                android:layout_marginRight="-16dp"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+<!--            <com.dimfcompany.videotrimtest2.custom_views.CustomSeekBar-->
+<!--                android:id="@+id/seekbar_for_play"-->
+
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_marginLeft="-6dp"-->
+<!--                android:layout_marginRight="-6dp"-->
+<!--                app:bar_color="@android:color/white"-->
+<!--                app:bar_highlight_color="@android:color/white"-->
+<!--                app:data_type="_integer"-->
+<!--                app:left_thumb_color="#ffffff"-->
+<!--                app:left_thumb_color_pressed="#cccccc"-->
+<!--                app:max_value="100"-->
+<!--                app:min_value="0" />-->
+
+
+            <!--            <com.xw.repo.BubbleSeekBar-->
+            <!--                android:layout_marginLeft="-10dp"-->
+            <!--                android:layout_marginRight="-10dp"-->
+            <!--                android:layout_marginTop="22dp"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="10dp"-->
+            <!--                app:bsb_bubble_color="@color/colorPrimary"-->
+            <!--                app:bsb_bubble_text_color="@color/colorPrimaryDark"-->
+            <!--                app:bsb_max="100"-->
+            <!--                app:bsb_min="0"-->
+            <!--                app:bsb_progress="50"-->
+            <!--                app:bsb_second_track_size="2dp"-->
+            <!--                app:bsb_track_size="2dp"-->
+            <!--                app:bsb_thumb_radius="4dp"-->
+            <!--                app:bsb_second_track_color="@color/colorPrimary"-->
+            <!--                app:bsb_show_section_mark="false"-->
+            <!--                app:bsb_show_section_text="false"-->
+            <!--                app:bsb_show_thumb_text="false"-->
+            <!--                app:bsb_track_color="@color/colorAccent" />-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/tv_time_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00" />
+
+            <TextView
+                android:id="@+id/tv_time_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="00:00:00" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
